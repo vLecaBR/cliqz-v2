@@ -148,7 +148,7 @@ O projeto utiliza uma paleta corporativa moderna:
 
 - **Primary**: Indigo (#6366f1) → Violet (#8b5cf6) → Purple (#a855f7)
 - **Background**: Dark Navy (#0A0E27)
-- **Surface**: Slate 900/800 com transparência
+- **Surface**: Slate 900/800 com transparência 
 - **Text**: White (#ffffff) e Slate 300-500
 
 ## 🧩 Componentes Principais
