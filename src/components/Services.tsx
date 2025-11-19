@@ -152,7 +152,10 @@ export function Services() {
               key={category.category}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-100px' }}
+              // CORREÇÃO PRINCIPAL AQUI:
+              // Removi o margin negativo e usei 'amount: 0.2'
+              // Isso significa: "Anime assim que 20% do item estiver visível"
+              viewport={{ once: true, amount: 0.2 }} 
               transition={{ delay: categoryIndex * 0.1, duration: 0.8 }}
             >
               {/* Category Header */}
