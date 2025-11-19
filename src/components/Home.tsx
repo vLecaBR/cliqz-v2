@@ -336,31 +336,6 @@ export function Home({ onNavigate }: HomeProps) {
             </motion.div>
           </div>
         </motion.div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="flex flex-col items-center gap-3"
-          >
-            <span className="text-slate-500 text-xs tracking-[0.3em] uppercase" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 600 }}>
-              Scroll
-            </span>
-            <div className="w-6 h-10 border-2 border-indigo-500/30 rounded-full p-1">
-              <motion.div
-                animate={{ y: [0, 16, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="w-1 h-3 bg-linear-to-b from-indigo-500 to-violet-500 rounded-full mx-auto"
-              />
-            </div>
-          </motion.div>
-        </motion.div>
       </section>
 
       {/* Stats Section with animated counters */}
