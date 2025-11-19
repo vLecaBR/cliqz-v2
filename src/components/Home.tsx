@@ -278,7 +278,7 @@ export function Home({ onNavigate }: HomeProps) {
                 className="flex flex-col sm:flex-row items-center justify-center gap-4"
               >
                 <motion.button
-                  onClick={() => onNavigate('services')}
+                  onClick={() => onNavigate("services")}
                   className="group relative px-8 py-4 bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 rounded-full overflow-hidden"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 600 }}
                   whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(99, 102, 241, 0.4)' }}
@@ -318,7 +318,7 @@ export function Home({ onNavigate }: HomeProps) {
                 </motion.button>
 
                 <motion.button
-                  onClick={() => onNavigate('portfolio')}
+                  onClick={() => onNavigate("portfolio")}
                   className="group relative px-8 py-4 bg-slate-900/50 backdrop-blur-xl border-2 border-indigo-500/30 rounded-full hover:border-indigo-500/60 transition-all"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 600 }}
                   whileHover={{ scale: 1.05 }}
@@ -563,7 +563,7 @@ export function Home({ onNavigate }: HomeProps) {
               >
                 <motion.div
                   className="group relative h-[500px] md:h-[700px] rounded-3xl overflow-hidden cursor-pointer"
-                  onClick={() => onNavigate('project', featuredProjects[currentProject].id)}
+                  onClick={() => onNavigate("project", featuredProjects[currentProject].id)}
                   whileHover={{ scale: 1.02 }}
                 >
                   {/* Image */}
@@ -713,7 +713,7 @@ export function Home({ onNavigate }: HomeProps) {
               </p>
 
               <motion.button
-                onClick={() => onNavigate('contact')}
+                onClick={() => onNavigate("contact")}
                 className="group relative px-10 py-5 bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 rounded-full overflow-hidden"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 700 }}
                 whileHover={{ scale: 1.05, boxShadow: '0 20px 60px rgba(99, 102, 241, 0.6)' }}

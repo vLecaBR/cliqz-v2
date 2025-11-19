@@ -5,8 +5,23 @@ export function Preloader() {
   const [progress, setProgress] = useState(0);
   const [loadingText, setLoadingText] = useState('INITIALIZING');
 
+  // 🔥 Random das partículas gerado uma única vez
+  const [particleConfigs] = useState(() =>
+    Array.from({ length: 15 }).map(() => ({
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      duration: 3 + Math.random() * 2,
+      delay: Math.random() * 2,
+    }))
+  );
+
   useEffect(() => {
-    const texts = ['INITIALIZING', 'LOADING ASSETS', 'PREPARING EXPERIENCE', 'ALMOST READY'];
+    const texts = [
+      'INITIALIZING',
+      'LOADING ASSETS',
+      'PREPARING EXPERIENCE',
+      'ALMOST READY',
+    ];
     let textIndex = 0;
 
     const textInterval = setInterval(() => {
@@ -37,22 +52,16 @@ export function Preloader() {
       exit={{ opacity: 0 }}
       className="fixed inset-0 z-50 flex items-center justify-center bg-[#0A0E27] overflow-hidden"
     >
-      {/* Animated background */}
+      {/* Background animado */}
       <div className="absolute inset-0">
         <motion.div
           className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/30 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.5, 1],
-            opacity: [0.3, 0.6, 0.3],
-          }}
+          animate={{ scale: [1, 1.5, 1], opacity: [0.3, 0.6, 0.3] }}
           transition={{ duration: 3, repeat: Infinity }}
         />
         <motion.div
           className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-violet-600/30 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.5, 1],
-            opacity: [0.3, 0.6, 0.3],
-          }}
+          animate={{ scale: [1, 1.5, 1], opacity: [0.3, 0.6, 0.3] }}
           transition={{ duration: 4, repeat: Infinity }}
         />
       </div>
@@ -69,9 +78,9 @@ export function Preloader() {
         />
       </div>
 
-      {/* Content */}
+      {/* Conteúdo central */}
       <div className="relative z-10 text-center px-4">
-        {/* Logo with 3D effect */}
+        {/* Logo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.5, rotateY: -180 }}
           animate={{ opacity: 1, scale: 1, rotateY: 0 }}
@@ -100,7 +109,7 @@ export function Preloader() {
             </span>
           </motion.h1>
 
-          {/* Orbital rings */}
+          {/* Anéis orbitais */}
           <div className="relative h-40 flex items-center justify-center">
             {[...Array(3)].map((_, i) => (
               <motion.div
@@ -110,31 +119,18 @@ export function Preloader() {
                   width: `${150 + i * 40}px`,
                   height: `${150 + i * 40}px`,
                 }}
-                animate={{
-                  rotate: 360,
-                }}
-                transition={{
-                  duration: 10 + i * 5,
-                  repeat: Infinity,
-                  ease: "linear",
-                }}
+                animate={{ rotate: 360 }}
+                transition={{ duration: 10 + i * 5, repeat: Infinity, ease: 'linear' }}
               >
                 <motion.div
                   className="absolute top-0 left-1/2 w-2 h-2 bg-indigo-500 rounded-full -translate-x-1/2"
-                  animate={{
-                    scale: [1, 1.5, 1],
-                    opacity: [0.5, 1, 0.5],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    delay: i * 0.3,
-                  }}
+                  animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }}
+                  transition={{ duration: 2, repeat: Infinity, delay: i * 0.3 }}
                 />
               </motion.div>
             ))}
 
-            {/* Center core */}
+            {/* Core */}
             <motion.div
               className="w-4 h-4 bg-gradient-to-br from-indigo-500 to-violet-500 rounded-full"
               animate={{
@@ -150,48 +146,36 @@ export function Preloader() {
           </div>
         </motion.div>
 
-        {/* Progress bar */}
+        {/* Progressbar */}
         <div className="w-96 max-w-full mx-auto space-y-8">
-          {/* Hexagonal progress */}
           <div className="relative h-2 bg-slate-900/50 rounded-full overflow-hidden backdrop-blur-sm border border-slate-800/50">
-            {/* Background shimmer */}
+            {/* Shimmer */}
             <motion.div
               className="absolute inset-0"
               style={{
-                background: 'linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent)',
+                background: 'linear-gradient(90deg, transparent, rgba(99,102,241,0.1), transparent)',
               }}
-              animate={{
-                x: ['-100%', '200%'],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                ease: "linear",
-              }}
+              animate={{ x: ['-100%', '200%'] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: 'linear' }}
             />
 
-            {/* Progress fill */}
+            {/* Fill */}
             <motion.div
               className="absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600"
               style={{ width: `${progress}%` }}
               transition={{ duration: 0.1 }}
             >
-              {/* Glow effect */}
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-indigo-400 via-violet-400 to-purple-400 opacity-50 blur-sm"
-                animate={{
-                  opacity: [0.5, 1, 0.5],
-                }}
+                animate={{ opacity: [0.5, 1, 0.5] }}
                 transition={{ duration: 1, repeat: Infinity }}
               />
             </motion.div>
 
-            {/* Leading edge glow */}
+            {/* Glow da ponta */}
             <motion.div
               className="absolute top-0 bottom-0 w-20 bg-gradient-to-r from-transparent to-white/30"
-              style={{
-                left: `${Math.max(0, progress - 5)}%`,
-              }}
+              style={{ left: `${Math.max(0, progress - 5)}%` }}
             />
           </div>
 
@@ -212,7 +196,10 @@ export function Preloader() {
 
             <motion.div
               className="text-slate-400 font-mono tabular-nums"
-              style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 700 }}
+              style={{
+                fontFamily: 'Plus Jakarta Sans, sans-serif',
+                fontWeight: 700,
+              }}
             >
               {progress}%
             </motion.div>
@@ -234,14 +221,14 @@ export function Preloader() {
         </div>
       </div>
 
-      {/* Particle effects */}
-      {[...Array(15)].map((_, i) => (
+      {/* Partículas FIXADAS (sem random no render) */}
+      {particleConfigs.map((p, i) => (
         <motion.div
           key={i}
           className="absolute w-1 h-1 bg-indigo-500/40 rounded-full"
           style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
+            left: `${p.left}%`,
+            top: `${p.top}%`,
           }}
           animate={{
             y: [0, -30, 0],
@@ -249,9 +236,9 @@ export function Preloader() {
             scale: [0, 1.5, 0],
           }}
           transition={{
-            duration: 3 + Math.random() * 2,
+            duration: p.duration,
             repeat: Infinity,
-            delay: Math.random() * 2,
+            delay: p.delay,
           }}
         />
       ))}

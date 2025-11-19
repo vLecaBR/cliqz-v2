@@ -21,15 +21,15 @@ export type Page =
 
 // Floating particles with PURE rendering
 function FloatingParticles() {
-  const particles = useMemo(() => {
-    return Array.from({ length: 30 }).map(() => ({
+  const [particles] = useState(() =>
+    Array.from({ length: 30 }).map(() => ({
       left: Math.random() * 100,
       top: Math.random() * 100,
       xOffset: Math.random() * 20 - 10,
       duration: 5 + Math.random() * 5,
       delay: Math.random() * 5,
-    }));
-  }, []);
+    }))
+  );
 
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden">
@@ -58,6 +58,7 @@ function FloatingParticles() {
     </div>
   );
 }
+
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<Page>("home");

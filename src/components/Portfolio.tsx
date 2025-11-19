@@ -125,7 +125,7 @@ export function Portfolio({ onNavigate }: PortfolioProps) {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ delay: index * 0.05 }}
-                onClick={() => onNavigate('project', project.id)}
+                onClick={() => onNavigate("project", project.id)}
                 whileHover={{ y: -10 }}
                 className="group relative rounded-2xl overflow-hidden cursor-pointer bg-slate-900/30 border border-slate-800/50 hover:border-indigo-500/50 transition-all"
               >
