@@ -149,11 +149,11 @@ export function ProjectDetail({ projectId, onNavigate }: ProjectDetailProps) {
           alt={project.title}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0A0E27] via-[#0A0E27]/70 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-[#0A0E27] via-[#0A0E27]/70 to-transparent" />
 
         <div className="absolute bottom-0 left-0 right-0 container mx-auto px-4 md:px-6 pb-12">
           <h1
-            className="text-4xl md:text-6xl mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-violet-500"
+            className="text-4xl md:text-6xl mb-4 text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-violet-500"
             style={{
               fontFamily: "Plus Jakarta Sans, sans-serif",
               fontWeight: 800,
@@ -189,10 +189,10 @@ export function ProjectDetail({ projectId, onNavigate }: ProjectDetailProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="p-8 bg-gradient-to-br from-indigo-600/10 to-violet-600/10 border border-indigo-500/20 rounded-2xl"
+            className="p-8 bg-linear-to-br from-indigo-600/10 to-violet-600/10 border border-indigo-500/20 rounded-2xl"
           >
             <h2
-              className="text-2xl mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-400"
+              className="text-2xl mb-4 text-transparent bg-clip-text bg-linear-to-r from-indigo-400 to-violet-400"
               style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 700 }}
             >
               Solução
@@ -237,7 +237,7 @@ export function ProjectDetail({ projectId, onNavigate }: ProjectDetailProps) {
             style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontWeight: 800 }}
           >
             Resultados e{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-violet-500">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-violet-500">
               Impacto
             </span>
           </h2>
@@ -266,7 +266,7 @@ export function ProjectDetail({ projectId, onNavigate }: ProjectDetailProps) {
                       <p className="text-slate-400 text-sm mb-2">{result.label}</p>
                       <div className="flex items-baseline gap-3">
                         <span
-                          className="text-5xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-violet-500"
+                          className="text-5xl text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-violet-500"
                           style={{
                             fontFamily: "Plus Jakarta Sans, sans-serif",
                             fontWeight: 800,
@@ -345,7 +345,7 @@ export function ProjectDetail({ projectId, onNavigate }: ProjectDetailProps) {
                           }}
                           viewport={{ once: true }}
                           transition={{ duration: 1.5, delay: 0.3 }}
-                          className="h-full bg-gradient-to-r from-indigo-500 to-violet-500 rounded-full"
+                          className="h-full bg-linear-to-r from-indigo-500 to-violet-500 rounded-full"
                         />
                       </div>
                     </div>
@@ -361,7 +361,7 @@ export function ProjectDetail({ projectId, onNavigate }: ProjectDetailProps) {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-20 text-center p-12 md:p-16 bg-gradient-to-br from-indigo-600/10 to-violet-600/10 border border-indigo-500/20 rounded-3xl"
+          className="mt-20 text-center p-12 md:p-16 bg-linear-to-br from-indigo-600/10 to-violet-600/10 border border-indigo-500/20 rounded-3xl"
         >
           <h3
             className="text-3xl md:text-4xl mb-6"
@@ -379,7 +379,7 @@ export function ProjectDetail({ projectId, onNavigate }: ProjectDetailProps) {
 
           <motion.button
             onClick={() => onNavigate("contact")}
-            className="px-10 py-4 bg-gradient-to-r from-indigo-600 to-violet-600 rounded-lg text-white"
+            className="px-10 py-4 bg-linear-to-r from-indigo-600 to-violet-600 rounded-lg text-white"
             style={{
               fontFamily: "Plus Jakarta Sans, sans-serif",
               fontWeight: 600,
