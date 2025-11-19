@@ -68,7 +68,7 @@ export function About() {
             className="text-5xl md:text-7xl mb-6"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 800 }}
           >
-            Sobre a <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-violet-500">CliqZ</span>
+            Sobre a <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-violet-500">CliqZ</span>
           </h1>
           <p className="text-xl text-slate-400 max-w-3xl mx-auto">
             Somos uma agência digital B2B focada em entregar soluções tecnológicas que geram resultados reais.
@@ -88,7 +88,7 @@ export function About() {
               className="p-8 bg-slate-900/30 border border-slate-800/50 rounded-2xl text-center"
             >
               <div
-                className="text-5xl mb-3 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-violet-500"
+                className="text-5xl mb-3 text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-violet-500"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 800 }}
               >
                 {stat.number}
@@ -103,7 +103,7 @@ export function About() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-32 max-w-4xl mx-auto text-center p-12 md:p-16 bg-gradient-to-br from-indigo-600/10 to-violet-600/10 border border-indigo-500/20 rounded-3xl"
+          className="mb-32 max-w-4xl mx-auto text-center p-12 md:p-16 bg-linear-to-br from-indigo-600/10 to-violet-600/10 border border-indigo-500/20 rounded-3xl"
         >
           <h2
             className="text-4xl md:text-5xl mb-8"
@@ -143,7 +143,7 @@ export function About() {
                 whileHover={{ y: -10 }}
                 className="p-8 bg-slate-900/30 border border-slate-800/50 rounded-2xl hover:border-indigo-500/50 transition-all"
               >
-                <div className="w-14 h-14 mb-6 rounded-xl bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center">
+                <div className="w-14 h-14 mb-6 rounded-xl bg-linear-to-br from-indigo-600 to-violet-600 flex items-center justify-center">
                   <value.icon className="text-white" size={28} />
                 </div>
 
@@ -189,7 +189,7 @@ export function About() {
                     alt={member.name}
                     className="w-full aspect-square object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0E27]/80 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-[#0A0E27]/80 to-transparent" />
                 </div>
 
                 <h3

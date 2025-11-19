@@ -25,7 +25,7 @@ export function Contact() {
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 800 }}
           >
             Vamos criar algo{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-violet-500">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-violet-500">
               extraordinário
             </span>
           </h1>
@@ -46,7 +46,7 @@ export function Contact() {
             className="p-8 bg-slate-900/30 border border-slate-800/50 rounded-2xl hover:border-indigo-500/50 transition-all cursor-pointer"
             onClick={handleCopyEmail}
           >
-            <div className="w-14 h-14 mb-6 rounded-xl bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center">
+            <div className="w-14 h-14 mb-6 rounded-xl bg-linear-to-br from-indigo-600 to-violet-600 flex items-center justify-center">
               <Mail className="text-white" size={28} />
             </div>
 
@@ -82,7 +82,7 @@ export function Contact() {
             className="p-8 bg-slate-900/30 border border-slate-800/50 rounded-2xl hover:border-indigo-500/50 transition-all cursor-pointer"
             onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
           >
-            <div className="w-14 h-14 mb-6 rounded-xl bg-gradient-to-br from-green-600 to-emerald-600 flex items-center justify-center">
+            <div className="w-14 h-14 mb-6 rounded-xl bg-linear-to-br from-green-600 to-emerald-600 flex items-center justify-center">
               <MessageCircle className="text-white" size={28} />
             </div>
 
@@ -108,7 +108,7 @@ export function Contact() {
             className="p-8 bg-slate-900/30 border border-slate-800/50 rounded-2xl hover:border-indigo-500/50 transition-all cursor-pointer"
             onClick={() => window.open('https://linkedin.com/company/cliqz', '_blank')}
           >
-            <div className="w-14 h-14 mb-6 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center">
+            <div className="w-14 h-14 mb-6 rounded-xl bg-linear-to-br from-blue-600 to-cyan-600 flex items-center justify-center">
               <Linkedin className="text-white" size={28} />
             </div>
 
@@ -131,7 +131,7 @@ export function Contact() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-4xl mx-auto p-12 md:p-16 bg-gradient-to-br from-indigo-600/10 to-violet-600/10 border border-indigo-500/20 rounded-3xl text-center"
+          className="max-w-4xl mx-auto p-12 md:p-16 bg-linear-to-br from-indigo-600/10 to-violet-600/10 border border-indigo-500/20 rounded-3xl text-center"
         >
           <h2
             className="text-3xl md:text-4xl mb-6"
