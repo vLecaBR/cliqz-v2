@@ -130,7 +130,8 @@ export function Contact() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+            viewport={{ once: true }}
+
           className="max-w-4xl mx-auto p-12 md:p-16 bg-linear-to-br from-indigo-600/10 to-violet-600/10 border border-indigo-500/20 rounded-3xl text-center"
         >
           <h2
