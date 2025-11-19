@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Target, Zap, Users, Award } from 'lucide-react';
+import { useEffect } from 'react';
 
 const values = [
   {
@@ -55,6 +56,11 @@ const team = [
 ];
 
 export function About() {
+  // 1. Garante que a página comece no topo
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="pt-32 pb-20">
       <div className="container mx-auto px-4 md:px-6">
@@ -80,9 +86,10 @@ export function About() {
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 1, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              // 2. Anima assim que 10% do item aparece
+              viewport={{ once: true, amount: 0.1 }} 
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -5 }}
               className="p-8 bg-slate-900/30 border border-slate-800/50 rounded-2xl text-center"
@@ -100,9 +107,9 @@ export function About() {
 
         {/* Mission */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 1, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.2 }}
           className="mb-32 max-w-4xl mx-auto text-center p-12 md:p-16 bg-linear-to-br from-indigo-600/10 to-violet-600/10 border border-indigo-500/20 rounded-3xl"
         >
           <h2
@@ -122,7 +129,7 @@ export function About() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           className="mb-32"
         >
           <h2
@@ -163,7 +170,7 @@ export function About() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           <h2
             className="text-4xl md:text-5xl mb-16 text-center"

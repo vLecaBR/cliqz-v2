@@ -1,5 +1,6 @@
-import { motion } from 'motion/react';
+import { motion, useInView } from 'motion/react';
 import { Brain, Code, Palette, TrendingUp, MessageSquare, Smartphone, Zap, BarChart3, Search, Globe } from 'lucide-react';
+import { useRef } from 'react';
 
 const services = [
   {
@@ -147,76 +148,77 @@ export function Services() {
 
         {/* Services */}
         <div className="space-y-32">
-          {services.map((category, categoryIndex) => (
-            <motion.div
-              key={category.category}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              // CORREÇÃO PRINCIPAL AQUI:
-              // Removi o margin negativo e usei 'amount: 0.2'
-              // Isso significa: "Anime assim que 20% do item estiver visível"
-              viewport={{ once: true, amount: 0.2 }} 
-              transition={{ delay: categoryIndex * 0.1, duration: 0.8 }}
-            >
-              {/* Category Header */}
-              <div className="flex items-center gap-4 mb-12">
-                <div className={`w-16 h-16 rounded-xl bg-linear-to-br ${colorMap[category.color as keyof typeof colorMap]} flex items-center justify-center`}>
-                  <category.icon className="text-white" size={32} />
-                </div>
-                <h2
-                  className="text-4xl md:text-5xl"
-                  style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 800 }}
+          {services.map((category) => {
+            const ref = useRef(null);
+            const isInView = useInView(ref, { once: true, amount: 0.2 });
+
+            return (
+              <div key={category.category} ref={ref}>
+                <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                  transition={{ duration: 0.8 }}
                 >
-                  {category.category}
-                </h2>
-              </div>
-
-              {/* Service Cards */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {category.services.map((service, serviceIndex) => (
-                  <motion.div
-                    key={service.title}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: serviceIndex * 0.1, duration: 0.6 }}
-                    whileHover={{ y: -10 }}
-                    className="group p-8 bg-slate-900/30 border border-slate-800/50 rounded-2xl hover:border-indigo-500/50 transition-all"
-                  >
-                    {/* Icon */}
-                    <div className="w-12 h-12 bg-slate-800/50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-600/20 transition-colors">
-                      <service.icon className="text-slate-400 group-hover:text-indigo-400 transition-colors" size={24} />
+                  {/* Category Header */}
+                  <div className="flex items-center gap-4 mb-12">
+                    <div className={`w-16 h-16 rounded-xl bg-linear-to-br ${colorMap[category.color as keyof typeof colorMap]} flex items-center justify-center`}>
+                      <category.icon className="text-white" size={32} />
                     </div>
-
-                    {/* Content */}
-                    <h3
-                      className="text-2xl mb-3"
-                      style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 700 }}
+                    <h2
+                      className="text-4xl md:text-5xl"
+                      style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 800 }}
                     >
-                      {service.title}
-                    </h3>
-                    <p className="text-slate-400 mb-8 leading-relaxed">{service.description}</p>
+                      {category.category}
+                    </h2>
+                  </div>
 
-                    {/* Metric */}
-                    <div className="p-5 bg-slate-800/30 rounded-xl border border-slate-700/50">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <div
-                            className="text-3xl mb-1 text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-violet-500"
-                            style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 800 }}
-                          >
-                            {service.metric}
-                          </div>
-                          <div className="text-xs text-slate-500">{service.metricLabel}</div>
+                  {/* Service Cards */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {category.services.map((service, serviceIndex) => (
+                      <motion.div
+                        key={service.title}
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                        transition={{ delay: serviceIndex * 0.1, duration: 0.6 }}
+                        whileHover={{ y: -10 }}
+                        className="group p-8 bg-slate-900/30 border border-slate-800/50 rounded-2xl hover:border-indigo-500/50 transition-all"
+                      >
+                        {/* Icon */}
+                        <div className="w-12 h-12 bg-slate-800/50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-600/20 transition-colors">
+                          <service.icon className="text-slate-400 group-hover:text-indigo-400 transition-colors" size={24} />
                         </div>
-                        <BarChart3 className="text-slate-700" size={32} />
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
+
+                        {/* Content */}
+                        <h3
+                          className="text-2xl mb-3"
+                          style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 700 }}
+                        >
+                          {service.title}
+                        </h3>
+                        <p className="text-slate-400 mb-8 leading-relaxed">{service.description}</p>
+
+                        {/* Metric */}
+                        <div className="p-5 bg-slate-800/30 rounded-xl border border-slate-700/50">
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <div
+                                className="text-3xl mb-1 text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-violet-500"
+                                style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 800 }}
+                              >
+                                {service.metric}
+                              </div>
+                              <div className="text-xs text-slate-500">{service.metricLabel}</div>
+                            </div>
+                            <BarChart3 className="text-slate-700" size={32} />
+                          </div>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
               </div>
-            </motion.div>
-          ))}
+            );
+          })}
         </div>
 
         {/* CTA */}
