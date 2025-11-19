@@ -138,7 +138,7 @@ export function Services() {
             className="text-5xl md:text-7xl mb-6"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 800 }}
           >
-            Nossos <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-violet-500">Serviços</span>
+            Nossos <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-violet-500">Serviços</span>
           </h1>
           <p className="text-xl text-slate-400 max-w-3xl mx-auto">
             Soluções integradas para impulsionar seu crescimento digital
@@ -157,7 +157,7 @@ export function Services() {
             >
               {/* Category Header */}
               <div className="flex items-center gap-4 mb-12">
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${colorMap[category.color as keyof typeof colorMap]} flex items-center justify-center`}>
+                <div className={`w-16 h-16 rounded-xl bg-linear-to-br ${colorMap[category.color as keyof typeof colorMap]} flex items-center justify-center`}>
                   <category.icon className="text-white" size={32} />
                 </div>
                 <h2
@@ -199,7 +199,7 @@ export function Services() {
                       <div className="flex items-center justify-between">
                         <div>
                           <div
-                            className="text-3xl mb-1 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-violet-500"
+                            className="text-3xl mb-1 text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-violet-500"
                             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 800 }}
                           >
                             {service.metric}
@@ -221,7 +221,7 @@ export function Services() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-32 text-center p-12 md:p-16 bg-gradient-to-br from-indigo-600/10 to-violet-600/10 border border-indigo-500/20 rounded-3xl"
+          className="mt-32 text-center p-12 md:p-16 bg-linear-to-br from-indigo-600/10 to-violet-600/10 border border-indigo-500/20 rounded-3xl"
         >
           <h3
             className="text-3xl md:text-4xl mb-6"
@@ -234,7 +234,7 @@ export function Services() {
           </p>
 
           <motion.button
-            className="px-10 py-4 bg-gradient-to-r from-indigo-600 to-violet-600 rounded-lg text-white"
+            className="px-10 py-4 bg-linear-to-r from-indigo-600 to-violet-600 rounded-lg text-white"
             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 600 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

@@ -104,7 +104,7 @@ export function Preloader() {
             transition={{ duration: 2, repeat: Infinity }}
           >
             <span className="text-white">Cliq</span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-500">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-violet-500 to-purple-500">
               Z
             </span>
           </motion.h1>
@@ -132,7 +132,7 @@ export function Preloader() {
 
             {/* Core */}
             <motion.div
-              className="w-4 h-4 bg-gradient-to-br from-indigo-500 to-violet-500 rounded-full"
+              className="w-4 h-4 bg-linear-to-br from-indigo-500 to-violet-500 rounded-full"
               animate={{
                 scale: [1, 1.2, 1],
                 boxShadow: [
@@ -161,12 +161,12 @@ export function Preloader() {
 
             {/* Fill */}
             <motion.div
-              className="absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600"
+              className="absolute inset-y-0 left-0 rounded-full bg-linear-to-r from-indigo-600 via-violet-600 to-purple-600"
               style={{ width: `${progress}%` }}
               transition={{ duration: 0.1 }}
             >
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-indigo-400 via-violet-400 to-purple-400 opacity-50 blur-sm"
+                className="absolute inset-0 bg-linear-to-r from-indigo-400 via-violet-400 to-purple-400 opacity-50 blur-sm"
                 animate={{ opacity: [0.5, 1, 0.5] }}
                 transition={{ duration: 1, repeat: Infinity }}
               />
@@ -174,7 +174,7 @@ export function Preloader() {
 
             {/* Glow da ponta */}
             <motion.div
-              className="absolute top-0 bottom-0 w-20 bg-gradient-to-r from-transparent to-white/30"
+              className="absolute top-0 bottom-0 w-20 bg-linear-to-r from-transparent to-white/30"
               style={{ left: `${Math.max(0, progress - 5)}%` }}
             />
           </div>
