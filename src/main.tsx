@@ -1,11 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
-import './styles/globals.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.tsx";
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+import "./styles/globals.css"; // SEMPRE primeiro (Tailwind)
+import "./index.css";          // ajustes
+import "./App.css";            // opcional
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);

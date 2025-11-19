@@ -157,7 +157,7 @@ export default function App() {
 
       {/* Scanline effect */}
       <motion.div
-        className="fixed inset-x-0 h-px bg-gradient-to-r from-transparent via-indigo-500/20 to-transparent pointer-events-none z-50"
+        className="fixed inset-x-0 h-px bg-linear-to-r from-transparent via-indigo-500/20 to-transparent pointer-events-none z-50"
         animate={{
           y: ['0vh', '100vh'],
         }}
