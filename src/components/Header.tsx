@@ -53,7 +53,7 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="absolute inset-0 bg-gradient-to-r from-indigo-500/5 via-violet-500/5 to-purple-500/5 pointer-events-none"
+            className="absolute inset-0 bg-linear-to-r from-indigo-500/5 via-violet-500/5 to-purple-500/5 pointer-events-none"
           />
         )}
 
@@ -74,7 +74,7 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
                 }}
               >
                 <span className="text-white drop-shadow-lg">Cliq</span>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-500 relative">
+                <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-violet-500 to-purple-500 relative">
                   Z
                   <motion.span
                     className="absolute -top-1 -right-1"
@@ -91,7 +91,7 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
 
               {/* Hover glow */}
               <motion.div
-                className="absolute -inset-4 bg-gradient-to-r from-indigo-500/0 via-violet-500/0 to-purple-500/0 group-hover:from-indigo-500/10 group-hover:via-violet-500/10 group-hover:to-purple-500/10 rounded-2xl blur-xl transition-all duration-500 -z-10"
+                className="absolute -inset-4 bg-linear-to-r from-indigo-500/0 via-violet-500/0 to-purple-500/0 group-hover:from-indigo-500/10 group-hover:via-violet-500/10 group-hover:to-purple-500/10 rounded-2xl blur-xl transition-all duration-500 -z-10"
                 whileHover={{ scale: 1.1 }}
               />
             </motion.button>
@@ -119,11 +119,11 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
                   {currentPage === item.page && (
                     <motion.div
                       layoutId="activeTab"
-                      className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-violet-600 rounded-full -z-10"
+                      className="absolute inset-0 bg-linear-to-r from-indigo-600 to-violet-600 rounded-full -z-10"
                       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                     >
                       <motion.div
-                        className="absolute inset-0 bg-gradient-to-r from-indigo-400 to-violet-400 rounded-full blur-lg opacity-50"
+                        className="absolute inset-0 bg-linear-to-r from-indigo-400 to-violet-400 rounded-full blur-lg opacity-50"
                         animate={{
                           opacity: [0.5, 0.8, 0.5],
                         }}
@@ -147,7 +147,7 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
             >
               {/* Animated gradient background */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600"
+                className="absolute inset-0 bg-linear-to-r from-indigo-600 via-violet-600 to-purple-600"
                 animate={{
                   backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
                 }}
@@ -176,7 +176,7 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
               </span>
 
               {/* Glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-violet-600 blur-lg opacity-0 group-hover:opacity-50 transition-opacity -z-10" />
+              <div className="absolute inset-0 bg-linear-to-r from-indigo-600 to-violet-600 blur-lg opacity-0 group-hover:opacity-50 transition-opacity -z-10" />
             </motion.button>
 
             {/* Mobile Menu Button */}
@@ -295,16 +295,16 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
                     {currentPage === item.page && (
                       <motion.div
                         layoutId="activeMobile"
-                        className="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-12 bg-gradient-to-b from-indigo-500 to-violet-500 rounded-full"
+                        className="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-12 bg-linear-to-b from-indigo-500 to-violet-500 rounded-full"
                         transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                       >
-                        <div className="absolute inset-0 bg-gradient-to-b from-indigo-400 to-violet-400 blur-lg rounded-full" />
+                        <div className="absolute inset-0 bg-linear-to-b from-indigo-400 to-violet-400 blur-lg rounded-full" />
                       </motion.div>
                     )}
 
                     {/* Hover indicator */}
                     <motion.div
-                      className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-gradient-to-b from-indigo-500/50 to-violet-500/50 rounded-full group-hover:h-12 transition-all duration-300"
+                      className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-linear-to-b from-indigo-500/50 to-violet-500/50 rounded-full group-hover:h-12 transition-all duration-300"
                     />
                   </motion.button>
                 ))}
@@ -314,7 +314,7 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
                   onClick={() => handleNavClick('contact')}
-                  className="relative mt-8 px-8 py-4 bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 rounded-full overflow-hidden group"
+                  className="relative mt-8 px-8 py-4 bg-linear-to-r from-indigo-600 via-violet-600 to-purple-600 rounded-full overflow-hidden group"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 600 }}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

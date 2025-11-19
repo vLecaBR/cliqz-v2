@@ -241,7 +241,7 @@ export function Home({ onNavigate }: HomeProps) {
                   Tecnologia que
                 </motion.span>
                 <motion.span
-                  className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-500 relative"
+                  className="block text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-violet-500 to-purple-500 relative"
                   animate={{
                     backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
                   }}
@@ -250,7 +250,7 @@ export function Home({ onNavigate }: HomeProps) {
                 >
                   impulsiona resultados
                   <motion.div
-                    className="absolute -inset-2 bg-gradient-to-r from-indigo-500/20 via-violet-500/20 to-purple-500/20 blur-3xl -z-10"
+                    className="absolute -inset-2 bg-linear-to-r from-indigo-500/20 via-violet-500/20 to-purple-500/20 blur-3xl -z-10"
                     animate={{
                       opacity: [0.5, 1, 0.5],
                       scale: [0.9, 1.1, 0.9],
@@ -278,15 +278,15 @@ export function Home({ onNavigate }: HomeProps) {
                 className="flex flex-col sm:flex-row items-center justify-center gap-4"
               >
                 <motion.button
-                  onClick={() => onNavigate('services')}
-                  className="group relative px-8 py-4 bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 rounded-full overflow-hidden"
+                  onClick={() => onNavigate("services")}
+                  className="group relative px-8 py-4 bg-linear-to-r from-indigo-600 via-violet-600 to-purple-600 rounded-full overflow-hidden"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 600 }}
                   whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(99, 102, 241, 0.4)' }}
                   whileTap={{ scale: 0.95 }}
                 >
                   {/* Animated gradient */}
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600"
+                    className="absolute inset-0 bg-linear-to-r from-violet-600 via-purple-600 to-indigo-600"
                     animate={{
                       backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
                     }}
@@ -318,7 +318,7 @@ export function Home({ onNavigate }: HomeProps) {
                 </motion.button>
 
                 <motion.button
-                  onClick={() => onNavigate('portfolio')}
+                  onClick={() => onNavigate("portfolio")}
                   className="group relative px-8 py-4 bg-slate-900/50 backdrop-blur-xl border-2 border-indigo-500/30 rounded-full hover:border-indigo-500/60 transition-all"
                   style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 600 }}
                   whileHover={{ scale: 1.05 }}
@@ -328,7 +328,7 @@ export function Home({ onNavigate }: HomeProps) {
 
                   {/* Hover glow */}
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-indigo-500/0 via-violet-500/0 to-purple-500/0 group-hover:from-indigo-500/10 group-hover:via-violet-500/10 group-hover:to-purple-500/10 rounded-full blur-xl -z-10"
+                    className="absolute inset-0 bg-linear-to-r from-indigo-500/0 via-violet-500/0 to-purple-500/0 group-hover:from-indigo-500/10 group-hover:via-violet-500/10 group-hover:to-purple-500/10 rounded-full blur-xl -z-10"
                     whileHover={{ scale: 1.2 }}
                   />
                 </motion.button>
@@ -336,35 +336,10 @@ export function Home({ onNavigate }: HomeProps) {
             </motion.div>
           </div>
         </motion.div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="flex flex-col items-center gap-3"
-          >
-            <span className="text-slate-500 text-xs tracking-[0.3em] uppercase" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 600 }}>
-              Scroll
-            </span>
-            <div className="w-6 h-10 border-2 border-indigo-500/30 rounded-full p-1">
-              <motion.div
-                animate={{ y: [0, 16, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="w-1 h-3 bg-gradient-to-b from-indigo-500 to-violet-500 rounded-full mx-auto"
-              />
-            </div>
-          </motion.div>
-        </motion.div>
       </section>
 
       {/* Stats Section with animated counters */}
-      <section className="py-20 border-y border-indigo-500/10 bg-gradient-to-r from-indigo-500/5 via-transparent to-violet-500/5 relative overflow-hidden">
+      <section className="py-20 border-y border-indigo-500/10 bg-linear-to-r from-indigo-500/5 via-transparent to-violet-500/5 relative overflow-hidden">
         {/* Animated background lines */}
         <motion.div
           className="absolute inset-0 opacity-10"
@@ -393,11 +368,11 @@ export function Home({ onNavigate }: HomeProps) {
                 <div className="relative p-8 bg-slate-900/30 backdrop-blur-xl border border-indigo-500/10 rounded-3xl group-hover:border-indigo-500/30 transition-all">
                   {/* Glow on hover */}
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-br from-indigo-500/0 to-violet-500/0 group-hover:from-indigo-500/10 group-hover:to-violet-500/10 rounded-3xl blur-xl -z-10 transition-all duration-500"
+                    className="absolute inset-0 bg-linear-to-br from-indigo-500/0 to-violet-500/0 group-hover:from-indigo-500/10 group-hover:to-violet-500/10 rounded-3xl blur-xl -z-10 transition-all duration-500"
                   />
 
                   <div
-                    className="text-5xl md:text-6xl mb-3 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-500"
+                    className="text-5xl md:text-6xl mb-3 text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-violet-500 to-purple-500"
                     style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 800 }}
                   >
                     <AnimatedCounter end={stat.value} suffix={stat.suffix} />
@@ -435,7 +410,7 @@ export function Home({ onNavigate }: HomeProps) {
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 800 }}
             >
               Especialidades <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-500">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-violet-500 to-purple-500">
                 Premium
               </span>
             </h2>
@@ -457,7 +432,7 @@ export function Home({ onNavigate }: HomeProps) {
                   <div className="group relative h-full p-8 bg-slate-900/50 backdrop-blur-xl border border-indigo-500/10 rounded-3xl hover:border-indigo-500/30 transition-all overflow-hidden">
                     {/* Animated gradient background */}
                     <motion.div
-                      className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+                      className={`absolute inset-0 bg-linear-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
                     />
 
                     {/* Grid pattern */}
@@ -476,12 +451,12 @@ export function Home({ onNavigate }: HomeProps) {
                     <div className="relative z-10" style={{ transform: 'translateZ(50px)' }}>
                       {/* Icon with glow */}
                       <motion.div
-                        className={`w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center relative`}
+                        className={`w-16 h-16 mb-6 rounded-2xl bg-linear-to-br ${service.gradient} flex items-center justify-center relative`}
                         whileHover={{ scale: 1.1, rotate: 5 }}
                       >
                         <service.icon className="text-white" size={32} />
                         <motion.div
-                          className={`absolute inset-0 bg-gradient-to-br ${service.gradient} rounded-2xl blur-xl opacity-50`}
+                          className={`absolute inset-0 bg-linear-to-br ${service.gradient} rounded-2xl blur-xl opacity-50`}
                           animate={{
                             scale: [1, 1.2, 1],
                             opacity: [0.5, 0.8, 0.5],
@@ -519,10 +494,10 @@ export function Home({ onNavigate }: HomeProps) {
       </section>
 
       {/* Featured Projects Carousel */}
-      <section className="py-32 bg-gradient-to-b from-transparent via-indigo-500/5 to-transparent relative overflow-hidden">
+      <section className="py-32 bg-linear-to-b from-transparent via-indigo-500/5 to-transparent relative overflow-hidden">
         {/* Decorative elements */}
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-indigo-500/50 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-transparent via-indigo-500/50 to-transparent" />
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <motion.div
@@ -543,7 +518,7 @@ export function Home({ onNavigate }: HomeProps) {
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 800 }}
             >
               Projetos em{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-500">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-violet-500 to-purple-500">
                 Destaque
               </span>
             </h2>
@@ -563,7 +538,7 @@ export function Home({ onNavigate }: HomeProps) {
               >
                 <motion.div
                   className="group relative h-[500px] md:h-[700px] rounded-3xl overflow-hidden cursor-pointer"
-                  onClick={() => onNavigate('project', featuredProjects[currentProject].id)}
+                  onClick={() => onNavigate("project", featuredProjects[currentProject].id)}
                   whileHover={{ scale: 1.02 }}
                 >
                   {/* Image */}
@@ -577,8 +552,8 @@ export function Home({ onNavigate }: HomeProps) {
                   />
 
                   {/* Gradient overlays */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0E27] via-[#0A0E27]/70 to-transparent" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/20 to-violet-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-linear-to-t from-[#0A0E27] via-[#0A0E27]/70 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-r from-indigo-900/20 to-violet-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                   {/* Content */}
                   <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
@@ -603,7 +578,7 @@ export function Home({ onNavigate }: HomeProps) {
                       <div className="flex items-center gap-6 p-4 bg-slate-900/50 backdrop-blur-2xl border border-slate-800/50 rounded-2xl w-fit">
                         <div>
                           <div
-                            className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400"
+                            className="text-4xl text-transparent bg-clip-text bg-linear-to-r from-green-400 to-emerald-400"
                             style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 800 }}
                           >
                             {featuredProjects[currentProject].metric}
@@ -652,7 +627,7 @@ export function Home({ onNavigate }: HomeProps) {
                   onClick={() => setCurrentProject(index)}
                   className={`h-2 rounded-full transition-all ${
                     index === currentProject
-                      ? 'w-12 bg-gradient-to-r from-indigo-500 to-violet-500'
+                      ? 'w-12 bg-linear-to-r from-indigo-500 to-violet-500'
                       : 'w-2 bg-slate-700 hover:bg-slate-600'
                   }`}
                   whileHover={{ scale: 1.2 }}
@@ -671,7 +646,7 @@ export function Home({ onNavigate }: HomeProps) {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="relative max-w-5xl mx-auto text-center p-12 md:p-20 bg-gradient-to-br from-indigo-600/20 via-violet-600/20 to-purple-600/20 backdrop-blur-2xl border border-indigo-500/30 rounded-3xl overflow-hidden"
+            className="relative max-w-5xl mx-auto text-center p-12 md:p-20 bg-linear-to-br from-indigo-600/20 via-violet-600/20 to-purple-600/20 backdrop-blur-2xl border border-indigo-500/30 rounded-3xl overflow-hidden"
           >
             {/* Animated background grid */}
             <motion.div
@@ -688,7 +663,7 @@ export function Home({ onNavigate }: HomeProps) {
             />
 
             {/* Glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-violet-500/10 to-purple-500/10 blur-3xl" />
+            <div className="absolute inset-0 bg-linear-to-br from-indigo-500/10 via-violet-500/10 to-purple-500/10 blur-3xl" />
 
             <div className="relative z-10">
               <motion.div
@@ -704,7 +679,7 @@ export function Home({ onNavigate }: HomeProps) {
               >
                 Pronto para transformar
                 <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-violet-400 to-purple-400">
+                <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-400 via-violet-400 to-purple-400">
                   seu negócio?
                 </span>
               </h2>
@@ -713,8 +688,8 @@ export function Home({ onNavigate }: HomeProps) {
               </p>
 
               <motion.button
-                onClick={() => onNavigate('contact')}
-                className="group relative px-10 py-5 bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 rounded-full overflow-hidden"
+                onClick={() => onNavigate("contact")}
+                className="group relative px-10 py-5 bg-linear-to-r from-indigo-600 via-violet-600 to-purple-600 rounded-full overflow-hidden"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 700 }}
                 whileHover={{ scale: 1.05, boxShadow: '0 20px 60px rgba(99, 102, 241, 0.6)' }}
                 whileTap={{ scale: 0.95 }}
