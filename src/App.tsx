@@ -2,7 +2,7 @@ import { useState, useEffect} from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Home } from "./pages/Home";
 import { Services } from "./pages/Services";
-import { Portfolio } from "./components/Portfolio";
+import { Portfolio } from "./pages/Portfolio";
 import { ProjectDetail } from "./components/ProjectDetail";
 import { About } from "./pages/About";
 import { Contact } from "./components/Contact";

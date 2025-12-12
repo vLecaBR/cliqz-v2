@@ -1,9 +1,9 @@
-import { Hero, MissionSection } from '../components/About/Hero';
-import { AboutStats } from '../components/About/Stats';
-import { Values } from '../components/About/Values';
-import { AchievementsSection } from '../components/About/Achievements';
-import { MethodologySection } from '../components/About/Methodology';
-import { DifferentialsSection } from '../components/About/Differentials';
+import { Hero, MissionSection } from '../components/about/Hero';
+import { AboutStats } from '../components/about/Stats';
+import { Values } from '../components/about/Values';
+import { AchievementsSection } from '../components/about/Achievements';
+import { MethodologySection } from '../components/about/Methodology';
+import { DifferentialsSection } from '../components/about/Differentials';
 
 export function About() {
   return (
