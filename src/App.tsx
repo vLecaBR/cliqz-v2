@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { Home } from "./pages/Home";
 import { Services } from "./pages/Services";
 import { Portfolio } from "./pages/Portfolio";
-import { ProjectDetail } from "./components/ProjectDetail";
+import { ProjectDetail } from "./pages/ProjectDetail";
 import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
 import { Header } from "./components/Header";
