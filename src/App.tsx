@@ -5,7 +5,7 @@ import { Services } from "./pages/Services";
 import { Portfolio } from "./pages/Portfolio";
 import { ProjectDetail } from "./components/ProjectDetail";
 import { About } from "./pages/About";
-import { Contact } from "./components/Contact";
+import { Contact } from "./pages/Contact";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Preloader } from "./components/Preloader";
