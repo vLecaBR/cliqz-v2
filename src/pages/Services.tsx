@@ -17,7 +17,6 @@ export function Services() {
             />
           ))}
         </div>
-
         <CTA />
       </div>
     </div>
