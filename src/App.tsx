@@ -8,7 +8,7 @@ import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
-import { Preloader } from "./components/Preloader";
+import { Preloader } from "./pages/Preloader";
 import { CustomCursor } from "./components/CustomCursor";
 
 export type Page =
