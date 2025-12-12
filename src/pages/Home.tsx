@@ -1,9 +1,9 @@
 import type { Page } from '../App'; // Ajuste o caminho se necessário
-import { Hero } from './Home/Hero';
-import { Stats } from './Home/Stats';
-import { Services } from './Home/Services';
-import { FeaturedProjects } from './Home/FeaturedProjects';
-import { CTASection } from './Home/CTASection';
+import { Hero } from '../components/Home/Hero';
+import { Stats } from '../components/Home/Stats';
+import { Services } from '../components/Home/Services';
+import { FeaturedProjects } from '../components/Home/FeaturedProjects';
+import { CTASection } from '../components/Home/CTASection';
 
 interface HomeProps {
   onNavigate: (page: Page, projectId?: string) => void;

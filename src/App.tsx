@@ -1,10 +1,10 @@
 import { useState, useEffect} from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Home } from "./components/Home";
+import { Home } from "./pages/Home";
 import { Services } from "./components/Services";
 import { Portfolio } from "./components/Portfolio";
 import { ProjectDetail } from "./components/ProjectDetail";
-import { About } from "./components/About";
+import { About } from "./pages/About";
 import { Contact } from "./components/Contact";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
