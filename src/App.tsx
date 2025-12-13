@@ -1,14 +1,14 @@
 import { useState, useEffect} from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Home } from "./components/Home";
-import { Services } from "./components/Services";
-import { Portfolio } from "./components/Portfolio";
-import { ProjectDetail } from "./components/ProjectDetail";
-import { About } from "./components/About";
-import { Contact } from "./components/Contact";
+import { Home } from "./pages/Home";
+import { Services } from "./pages/Services";
+import { Portfolio } from "./pages/Portfolio";
+import { ProjectDetail } from "./pages/ProjectDetail";
+import { About } from "./pages/About";
+import { Contact } from "./pages/Contact";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
-import { Preloader } from "./components/Preloader";
+import { Preloader } from "./pages/Preloader";
 import { CustomCursor } from "./components/CustomCursor";
 
 export type Page =
